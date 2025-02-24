@@ -44,7 +44,7 @@
         {
           "properties": {
             "mapped_shell_names": {
-              "bash": "\ue760",
+              "bash": "\uebca",
               "cmd": "\ueb4c",
               "fish": "\uee41",
               "powershell": "\uebc7",
@@ -57,6 +57,12 @@
           "style": "plain"
         },
         {
+          "type": "os",
+          "template": "{{ if .WSL }}[WSL @ {{ .Icon }}]{{ end }}",
+          "foreground": "p:sapphire",
+          "style": "plain"
+        },
+        {
           "template": "[{{ .UserName }}@{{ .HostName }}]",
           "foreground": "p:teal",
           "type": "session",
@@ -66,7 +72,7 @@
           "properties": {
             "playing_icon": "\uf1bc"
           },
-          "template": "[{{ .Icon }} {{ if ne .Status \"stopped\" }}{{ .Track }} ~ {{ .Artist }}{{ end }}]",
+          "template": "[{{ if ne .Status \"stopped\" }}{{ .Icon }} {{ .Track }} ~ {{ .Artist }}{{ end }}]",
           "foreground": "p:green",
           "type": "spotify",
           "style": "plain"
@@ -115,7 +121,7 @@
           "style": "plain"
         },
         {
-          "template": "[{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}]",
+          "template": "[{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Staging.Changed) (.Working.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if .AheadBehind.Ahead }} ↑{{ .AheadBehind.Ahead }}{{ end }}{{ if .AheadBehind.Behind }} ↓{{ .AheadBehind.Behind }}{{ end }}{{ if .Untracked.Changed }} \uf059 {{ .Untracked.String }}{{ end }}]",
           "foreground": "p:pink",
           "type": "git",
           "style": "plain"
@@ -160,7 +166,7 @@
     "template": "\udb80\udd3e "
   },
   "secondary_prompt": {
-    "template": "\udb80\udd3e ",
+    "template": "\udb80\udd3e\u2800",
     "foreground": "p:blue",
     "background": "transparent"
   },

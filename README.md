@@ -3,9 +3,9 @@
 ## TODO
 
 - [ ] OhMyPosh prompt setup
-  - [ ] richer git integration within prompt
+  - [x] richer git integration within prompt (kinda)
   - [ ] node language support
   - [ ] better colors & uniform icons
     - [ ] clean up palette 
-  - [ ] secondary prompt bug
+  - [x] secondary prompt bug
   - [ ] console title
