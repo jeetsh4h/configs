@@ -120,7 +120,7 @@
           "properties": {
             "fetch_package_manager": true
           },
-          "template": "[\udb80\udf99{{ if not .Error }}{{ if .PackageManagerIcon }} {{ .PackageManagerIcon }}{{ end }} {{ .Full }}{{ end }}]",
+          "template": "[󰎙{{ if not .Error }}{{ if .PackageManagerIcon }} {{ .PackageManagerIcon }}{{ end }} {{ .Full }}{{ end }}]",
           "foreground": "p:green",
           "style": "plain"
         },
